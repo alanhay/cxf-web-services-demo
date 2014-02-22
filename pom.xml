@@ -9,6 +9,7 @@
 	<modules>
 		<module>cxf-ws-domain</module>
 		<module>cxf-ws-services</module>
+		<module>cxf-ws-webapp</module>
 	</modules>
 
 	<properties>
