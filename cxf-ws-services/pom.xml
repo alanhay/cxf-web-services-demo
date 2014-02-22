@@ -15,8 +15,9 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-api</artifactId>
+			<version>${org.apache.cxf.version}</version>
 		</dependency>
 	</dependencies>
 
