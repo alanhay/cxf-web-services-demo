@@ -1,9 +1,15 @@
 package uk.co.certait.ws.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "order")
+public class Order implements Serializable{
 
 	private Long id;
 	private List<OrderLine> lines;
@@ -13,8 +19,7 @@ public class Order {
 	}
 
 	public Order(long id) {
-		super();
-
+		this();
 		this.id = id;
 	}
 
@@ -26,8 +31,14 @@ public class Order {
 		this.id = id;
 	}
 
+	@XmlElementWrapper(name="orderLines")
+	@XmlElement(name="orderLine")
 	public List<OrderLine> getLines() {
 		return lines;
+	}
+
+	public void setLines(List<OrderLine> lines) {
+		this.lines = lines;
 	}
 
 	public void addLine(OrderLine line) {

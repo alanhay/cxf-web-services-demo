@@ -1,6 +1,8 @@
 package uk.co.certait.ws.domain;
 
-public class OrderLine {
+import java.io.Serializable;
+
+public class OrderLine implements Serializable {
 
 	private String productId;
 	private int quantity;

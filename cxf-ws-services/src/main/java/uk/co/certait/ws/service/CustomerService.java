@@ -13,7 +13,7 @@ import uk.co.certait.ws.domain.Customer;
  * @author alanhay
  * 
  */
-@WebService(/*name = "customerService", serviceName = "getCustomer", portName = "getCustomerPort",*/ targetNamespace = "http://certait.co.uk", wsdlLocation = "http://localhost:8080/ws/customerService?wsdl")
+@WebService(/*name = "customerService", serviceName = "getCustomer", portName = "getCustomerPort",*/ targetNamespace = "http://certait.co.uk"/*, wsdlLocation = "http://localhost:8080/ws/customerService?wsdl"*/)
 public interface CustomerService {
 
 	@WebMethod

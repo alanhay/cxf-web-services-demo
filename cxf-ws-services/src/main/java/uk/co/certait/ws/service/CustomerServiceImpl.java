@@ -15,10 +15,17 @@ public class CustomerServiceImpl implements CustomerService {
 	public Customer getCustomer(long customerId) {
 
 		Customer customer = new Customer(1, "Alan", "Hay");
-		Order order = new Order(1);
-		order.addLine(new OrderLine("abc1", 12));
-		order.addLine(new OrderLine("def1", 23));
-		customer.addOrder(order);
+		
+		Order order1 = new Order(1);
+		order1.addLine(new OrderLine("abc1", 12));
+		order1.addLine(new OrderLine("def1", 23));
+		customer.addOrder(order1);
+		
+		Order order2 = new Order(2);
+		order2.addLine(new OrderLine("abc1", 12));
+		order2.addLine(new OrderLine("def1", 23));
+		
+		customer.addOrder(order2);
 
 		return customer;
 	}

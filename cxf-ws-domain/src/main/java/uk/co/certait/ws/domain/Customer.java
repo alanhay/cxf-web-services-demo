@@ -1,9 +1,13 @@
 package uk.co.certait.ws.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customer {
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+
+public class Customer implements Serializable {
 
 	private long id;
 	private String forename;
@@ -15,7 +19,7 @@ public class Customer {
 	}
 
 	public Customer(long id, String forename, String surname) {
-		super();
+		this();
 
 		this.id = id;
 		this.forename = forename;
@@ -46,8 +50,14 @@ public class Customer {
 		this.surname = surname;
 	}
 
+	@XmlElementWrapper(name="orders")
+	@XmlElement(name="order")
 	public List<Order> getOrders() {
 		return orders;
+	}
+
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
 	}
 
 	public void addOrder(Order order) {
