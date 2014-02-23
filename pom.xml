@@ -10,6 +10,7 @@
 		<module>cxf-ws-domain</module>
 		<module>cxf-ws-services</module>
 		<module>cxf-ws-webapp</module>
+		<module>cxf-ws-client</module>
 	</modules>
 
 	<properties>
@@ -41,6 +42,7 @@
 						<source>${java.version}</source>
 						<target>${java.version}</target>
 						<encoding>${project.build.sourceEncoding}</encoding>
+						<executable>C:/Program Files/Java/jdk1.7.0/bin/javac</executable>
 					</configuration>
 				</plugin>
 			</plugins>

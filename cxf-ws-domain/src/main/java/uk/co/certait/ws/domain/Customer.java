@@ -6,7 +6,9 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlType;
 
+@XmlType(namespace="http://certait.co.uk")
 public class Customer implements Serializable {
 
 	private long id;
@@ -50,8 +52,8 @@ public class Customer implements Serializable {
 		this.surname = surname;
 	}
 
-	@XmlElementWrapper(name="orders")
-	@XmlElement(name="order")
+	@XmlElementWrapper(name = "orders")
+	@XmlElement(name = "order")
 	public List<Order> getOrders() {
 		return orders;
 	}

@@ -6,9 +6,9 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "order")
+@XmlType(namespace="http://certait.co.uk")
 public class Order implements Serializable{
 
 	private Long id;

@@ -2,10 +2,15 @@ package uk.co.certait.ws.domain;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(namespace="http://certait.co.uk")
 public class OrderLine implements Serializable {
 
 	private String productId;
 	private int quantity;
+	
+	public OrderLine(){}
 
 	public OrderLine(String productId, int quantity) {
 		this.productId = productId;
@@ -27,5 +32,4 @@ public class OrderLine implements Serializable {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
 }
