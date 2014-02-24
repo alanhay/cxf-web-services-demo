@@ -5,10 +5,13 @@
 http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd
 http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
-
+	
+	<!-- Required When Deployed to Servlet Container -->
+	<!--  
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-
+	-->
+	
 	<jaxws:endpoint id="customerService" 
 		implementor="uk.co.certait.ws.service.CustomerServiceImpl" address="/CustomerService" />
 </beans>
