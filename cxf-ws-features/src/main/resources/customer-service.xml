@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="customer-service">
+	<feature name="customer-service-cxf">
+		<bundle>mvn:uk.co.certait/cxf-ws-domain/0.0.1-SNAPSHOT</bundle>
+		<bundle>mvn:uk.co.certait/cxf-ws-services/0.0.1-SNAPSHOT</bundle>
+	</feature>
+</features>
